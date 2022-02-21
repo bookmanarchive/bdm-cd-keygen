@@ -1,5 +1,7 @@
 # Franklin Bookman Desktop Manager CD-key generator
 
+![](BCD-1.v1.0.png)
+
 This code pertains to the setup step in one of these installation CDs:
 - https://archive.org/details/franklin-bookman-desktop-manager-1.0
 - https://archive.org/details/franklin-bookman-desktop-manager-1.2

@@ -1,0 +1,47 @@
+<html>
+<style>
+	input {
+		font-size: 1.5em;
+		font-family: monospace
+	}
+
+	fieldset {
+		border: 1px solid #ddd;
+	}
+</style>
+
+<body style="font-family: arial, sans-serif">
+	<script>
+		function generateKey(e) {
+			e.preventDefault();
+			fetch('/generate')
+				.then(res => res.text())
+				.then(res => document.getElementById('generated').value = res);
+		}
+		function validateKey(e) {
+			e.preventDefault();
+			fetch('/validate?key=' + document.getElementById('key').value)
+				.then(res => res.text())
+				.then(res => document.getElementById('validation-result').innerHTML = res);
+		}
+	</script>
+	<form onsubmit="generateKey(event)">
+		<fieldset>
+			<legend>Generate a CD key</legend>
+			<input type="text" id="generated" readonly><input type="submit" value="Generate">
+		</fieldset>
+	</form>
+	<form onsubmit="validateKey(event)">
+		<fieldset>
+			<legend>Validate a CD key</legend>
+			<input type="text" id="key" required><input type="submit" value="Validate">
+			<br><code id="validation-result"></code>
+		</fieldset>
+	</form>
+	<br>
+	<center>
+		<a href="https://jsyang.ca/hacks/franklin-bookman-desktop-manager-cd-key-scheme-reversed/" target="_blank">What is this?</a>
+	</center>
+</body>
+
+</html>
