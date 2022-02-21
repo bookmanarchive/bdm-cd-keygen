@@ -1,5 +1,4 @@
-# Franklin Bookman Desktop Manager 
-# CD-key generator 🔓💿🖥️
+# Franklin Bookman Desktop Manager <br> CD-key generator 🔓💿🖥️
 
 ![](BCD-1.v1.0.png)
 
