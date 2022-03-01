@@ -1,7 +1,7 @@
 {
   "name": "franklin-bdm-cd-keygen",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "cd-keygen.js",
   "repository": "git@github.com:jsyang/franklin-bdm-cd-keygen.git",
   "scripts": {
     "start": "node ."
