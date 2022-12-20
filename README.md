@@ -10,6 +10,6 @@ This code pertains to the key entry step in one of these installation CDs:
 
 See https://jsyang.ca/hacks/franklin-bookman-desktop-manager-cd-key-scheme-reversed/ for the reversing process used to write the keygen.
 
-You can import this repo as a library. Or you can also use it live at https://bdm-cd-keygen.herokuapp.com/
+You can import this repo as a library, or it can be hosted as a static site (serve all files in the `public` directory).
 
 ## MIT licensed.

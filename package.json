@@ -1,15 +1,14 @@
 {
-  "name": "franklin-bdm-cd-keygen",
+  "name": "bdm-cd-keygen",
   "version": "1.0.0",
   "main": "cd-keygen.js",
   "repository": "git@github.com:jsyang/franklin-bdm-cd-keygen.git",
   "scripts": {
-    "start": "node ."
+    "bundle": "browserify index.js -o public/bundle.js"
   },
   "author": "jsyang <jsyang.ca@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "cuint": "^0.2.2",
-    "express": "^4.17.3"
+    "cuint": "^0.2.2"
   }
 }

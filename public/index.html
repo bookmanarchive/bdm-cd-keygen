@@ -13,38 +13,30 @@
 		background-color: rgba(255, 255, 255, 0.8);
 		padding: 0.2em;
 	}
-
-	#graphic {
-		font-size: 8em;
-		position: fixed;
-		bottom: 0;
-		right: 0;
-		opacity: 0.8;
-		margin-right: 0.2em;
-		z-index: -1;
-		user-select: none;
-	}
 </style>
 
 <body style="font-family: arial, sans-serif">
+	<script src="bundle.js"></script>
 	<script>
 		function generateKey(e) {
 			e.preventDefault();
-			fetch('/generate')
-				.then(res => res.text())
-				.then(res => document.getElementById('generated').value = res);
+			document.getElementById('generated').value = window.CDKeyGen.generate();
 		}
 		function validateKey(e) {
 			e.preventDefault();
-			fetch('/validate?key=' + document.getElementById('key').value)
-				.then(res => res.text())
-				.then(res => {
-					const emojiSignal = res.indexOf('INVALID') > 0 ? '❌' : '✅';
-					document.getElementById('validation-result').innerHTML = emojiSignal + ' ' + res;
-				});
+			const isValid = window.CDKeyGen.validate(document.getElementById('key').value);
+			const humanText = isValid ? '✅ OK' : '❌ INVALID KEY';
+			document.getElementById('validation-result').innerHTML = humanText;
 		}
 	</script>
 	<div id="main">
+		<h1>Franklin Bookman Desktop Manager (BDM) CD Key Generator</h1>
+		<center>
+			<a href="https://jsyang.ca/hacks/franklin-bookman-desktop-manager-cd-key-scheme-reversed/"
+				target="_blank">What
+				is this?</a>
+			(<a href="https://github.com/bookmanarchive/bdm-cd-keygen/" target="_blank">source code</a>)
+		</center><br>
 
 		<form onsubmit="generateKey(event)">
 			<fieldset>
@@ -59,15 +51,7 @@
 				<br><br><code id="validation-result"></code>
 			</fieldset>
 		</form>
-		<br>
-		<center>
-			<a href="https://jsyang.ca/hacks/franklin-bookman-desktop-manager-cd-key-scheme-reversed/"
-				target="_blank">What
-				is this?</a>
-			(<a href="https://github.com/jsyang/franklin-bdm-cd-keygen" target="_blank">source code</a>)
-		</center>
 	</div>
-	<div id="graphic">🔓💿 </div>
 </body>
 
 </html>
