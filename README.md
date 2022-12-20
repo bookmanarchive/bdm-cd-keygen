@@ -1,5 +1,12 @@
 # Franklin Bookman Desktop Manager <br> CD-key generator 🔓💿🖥️
 
+<img src=screenshot.png>
+
+
+Use this app online [here](https://bookmanarchive.github.io/bdm-cd-keygen/)
+
+## About
+
 ![](BCD-1.v1.0.png)
 
 This code pertains to the key entry step in one of these installation CDs:
@@ -13,5 +20,6 @@ See https://jsyang.ca/hacks/franklin-bookman-desktop-manager-cd-key-scheme-rever
 You can import this repo as a library, or it can be hosted as a static site. Just serve up these files:
 - index.html
 - bundle.js
+
 
 ## MIT licensed.
