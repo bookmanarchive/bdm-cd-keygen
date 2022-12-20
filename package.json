@@ -4,7 +4,7 @@
   "main": "cd-keygen.js",
   "repository": "git@github.com:jsyang/franklin-bdm-cd-keygen.git",
   "scripts": {
-    "bundle": "browserify index.js -o public/bundle.js"
+    "bundle": "browserify index.js -o bundle.js"
   },
   "author": "jsyang <jsyang.ca@gmail.com>",
   "license": "MIT",
